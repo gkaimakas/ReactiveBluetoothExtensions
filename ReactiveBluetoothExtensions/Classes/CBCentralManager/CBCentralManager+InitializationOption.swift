@@ -9,38 +9,10 @@ import CoreBluetooth
 import Foundation
 
 extension CBCentralManager {
-    public enum InitializationOption: Equatable, Hashable {
-        public static func ==(lhs: InitializationOption, rhs: InitializationOption) -> Bool {
-            switch (lhs, rhs) {
-            case (.showPowerAlert(let a), .showPowerAlert(let b)): return a == b
-            case (.restoreIdentifier(let a), .restoreIdentifier(let b)): return a == b
-            default: return false
-            }
-        }
-
-        public static func parse(dictionary: [String: Any]) -> [InitializationOption] {
-            return dictionary
-                .map { (key, value) -> InitializationOption? in
-                    if key == CBCentralManagerOptionShowPowerAlertKey, let value = value as? Bool {
-                        return .showPowerAlert(value)
-                    }
-
-                    if key == CBCentralManagerOptionRestoreIdentifierKey, let value = value as? UUID {
-                        return .restoreIdentifier(value)
-                    }
-
-                    return nil
-                }
-                .filter { $0 != nil }
-                .map { $0! }
-        }
-
-        public var hashValue: Int {
-            switch self {
-            case .showPowerAlert(_): return 2_000
-            case .restoreIdentifier(_): return 20_000
-            }
-        }
+    public enum InitializationOption {
+        
+        case showPowerAlert(Bool)
+        case restoreIdentifier(UUID)
 
         public var key: String {
             switch self {
@@ -55,9 +27,44 @@ extension CBCentralManager {
             case .restoreIdentifier(let uuids): return uuids as Any
             }
         }
+    }
+}
 
-        case showPowerAlert(Bool)
-        case restoreIdentifier(UUID)
+extension CBCentralManager.InitializationOption {
+    public static func map(dictionary: [String: Any]) -> [CBCentralManager.InitializationOption] {
+        return dictionary
+            .map { (key, value) -> CBCentralManager.InitializationOption? in
+                if key == CBCentralManagerOptionShowPowerAlertKey, let value = value as? Bool {
+                    return .showPowerAlert(value)
+                }
+                
+                if key == CBCentralManagerOptionRestoreIdentifierKey, let value = value as? UUID {
+                    return .restoreIdentifier(value)
+                }
+                
+                return nil
+            }
+            .filter { $0 != nil }
+            .map { $0! }
+    }
+}
+
+extension CBCentralManager.InitializationOption: Equatable {
+    public static func ==(lhs: CBCentralManager.InitializationOption, rhs: CBCentralManager.InitializationOption) -> Bool {
+        switch (lhs, rhs) {
+        case (.showPowerAlert(let a), .showPowerAlert(let b)): return a == b
+        case (.restoreIdentifier(let a), .restoreIdentifier(let b)): return a == b
+        default: return false
+        }
+    }
+}
+
+extension CBCentralManager.InitializationOption: Hashable {
+    public var hashValue: Int {
+        switch self {
+        case .showPowerAlert(_): return 2_000
+        case .restoreIdentifier(_): return 20_000
+        }
     }
 }
 
