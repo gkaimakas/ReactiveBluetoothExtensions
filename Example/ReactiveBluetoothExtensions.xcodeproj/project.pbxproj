@@ -28,12 +28,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1285346839207E5FF8A3E618 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1285346839207E5FF8A3E618 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		20A04F4EFFFA67F39A132777 /* Pods-ReactiveBluetoothExtensions_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBluetoothExtensions_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBluetoothExtensions_Example/Pods-ReactiveBluetoothExtensions_Example.release.xcconfig"; sourceTree = "<group>"; };
 		21D2F2657839CC8C8390A64E /* Pods-ReactiveBluetoothExtensions_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBluetoothExtensions_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBluetoothExtensions_Tests/Pods-ReactiveBluetoothExtensions_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		44A4D071ACDBD3C09606249B /* Pods-ReactiveBluetoothExtensions_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBluetoothExtensions_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBluetoothExtensions_Tests/Pods-ReactiveBluetoothExtensions_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5077BED565D7FBC0B72F0447 /* Pods-ReactiveBluetoothExtensions_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBluetoothExtensions_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBluetoothExtensions_Example/Pods-ReactiveBluetoothExtensions_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		5519AFA4D734AD4E0AC526A5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5519AFA4D734AD4E0AC526A5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ReactiveBluetoothExtensions_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveBluetoothExtensions_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6C86701247B1A6D3F31975FE /* Pods_ReactiveBluetoothExtensions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveBluetoothExtensions_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C055C3EF2D9524CC4438CC6D /* Pods_ReactiveBluetoothExtensions_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveBluetoothExtensions_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E70E277C8A08BC4A8D88A2A6 /* ReactiveBluetoothExtensions.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ReactiveBluetoothExtensions.podspec; path = ../ReactiveBluetoothExtensions.podspec; sourceTree = "<group>"; };
+		E70E277C8A08BC4A8D88A2A6 /* ReactiveBluetoothExtensions.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ReactiveBluetoothExtensions.podspec; path = ../ReactiveBluetoothExtensions.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,12 +340,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveBluetoothExtensions_Example/Pods-ReactiveBluetoothExtensions_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ReactiveBluetoothExtensions/ReactiveBluetoothExtensions.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveBluetoothExtensions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

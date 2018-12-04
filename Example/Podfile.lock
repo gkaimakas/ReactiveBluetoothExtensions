@@ -1,0 +1,40 @@
+PODS:
+  - Nimble (7.0.3)
+  - Quick (1.2.0)
+  - ReactiveBluetoothExtensions (0.1.0):
+    - ReactiveCocoa (~> 8.0)
+    - ReactiveSwift (~> 4.0)
+  - ReactiveCocoa (8.0.2):
+    - ReactiveSwift (~> 4.0)
+  - ReactiveSwift (4.0.0):
+    - Result (~> 4.0)
+  - Result (4.0.0)
+
+DEPENDENCIES:
+  - Nimble (~> 7.0.2)
+  - Quick (~> 1.2.0)
+  - ReactiveBluetoothExtensions (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Nimble
+    - Quick
+    - ReactiveCocoa
+    - ReactiveSwift
+    - Result
+
+EXTERNAL SOURCES:
+  ReactiveBluetoothExtensions:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  ReactiveBluetoothExtensions: 10e2a2c8a69660eb01491b80bef8032240ded1dc
+  ReactiveCocoa: fbd26e9ba60e98417ee47433e59465a98ed9da0f
+  ReactiveSwift: a2bb9ace428a109e9c0209615645d9d286c8c433
+  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
+
+PODFILE CHECKSUM: ff21d2be3e1c93241a57cf1d8859a63987be225f
+
+COCOAPODS: 1.5.3

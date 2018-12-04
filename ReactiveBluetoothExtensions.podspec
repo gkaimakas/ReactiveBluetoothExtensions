@@ -18,25 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+    A set of extensions that bridge the gap between `CoreBluetooth` and `ReactiveSwift`.
                        DESC
 
-  s.homepage         = 'https://github.com/gkaimakas@gmail.com/ReactiveBluetoothExtensions'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/gkaimakas/ReactiveBluetoothExtensions'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'gkaimakas@gmail.com' => 'gkaimakas@gmail.com' }
-  s.source           = { :git => 'https://github.com/gkaimakas@gmail.com/ReactiveBluetoothExtensions.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'George Kaimakas' => 'gkaimakas@gmail.com' }
+  s.source           = { :git => 'https://github.com/gkaimakas/ReactiveBluetoothExtensions.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '11.0'
 
   s.source_files = 'ReactiveBluetoothExtensions/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'ReactiveBluetoothExtensions' => ['ReactiveBluetoothExtensions/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'ReactiveSwift' , '~> 4.0'
+  s.dependency 'ReactiveCocoa', '~> 8.0'
 end
